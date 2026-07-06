@@ -19,7 +19,7 @@ A Python and ESP32-based IoT clap detection system that wirelessly controls an E
 
 The image below shows the Python application detecting a clap while wirelessly controlling the ESP32 built-in LED.
 
-![IoT ClapSwitch Demo](images/iot_clapswitch_demo.png)
+![IoT ClapSwitch Demo](images/iot_clapswitch_demo.jpeg)
 
 ---
 
@@ -147,7 +147,7 @@ IoT-ClapSwitch/
 │       └── ESP32_ClapSwitch.ino
 │
 ├── images/
-│   └── iot_clapswitch_demo.png
+│   └── iot_clapswitch_demo.jpeg
 │
 ├── main.py
 ├── requirements.txt
