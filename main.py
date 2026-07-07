@@ -11,7 +11,8 @@ CHUNK_SIZE = 4410
 THRESHOLD = 0.25
 
 # Replace with your ESP32 IP Address
-ESP32_IP = "http://10.126.3.246"
+ESP32_IP = "http://10.126.3.34"
+
 
 # -----------------------------
 # TRACKER VARIABLES

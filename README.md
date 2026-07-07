@@ -1,6 +1,8 @@
-# IoT-ClapSwitch
+# IoT ClapSwitch
 
-A Python and ESP32-based IoT clap detection system that wirelessly controls an ESP32 over Wi-Fi using HTTP communication. The project demonstrates real-time audio processing, embedded systems programming, networking and Internet of Things (IoT) concepts.
+An IoT-enabled clap detection system that listens through the computer microphone and controls an ESP32 wirelessly over Wi-Fi.
+
+When a clap is detected, the Python application sends an HTTP request to the ESP32, which toggles its built-in LED in real time. The ESP32 also hosts a responsive web dashboard that allows users to monitor the LED status and control it remotely from any device connected to the same network.
 
 ---
 
@@ -10,27 +12,38 @@ A Python and ESP32-based IoT clap detection system that wirelessly controls an E
 - Clap detection using audio peak analysis
 - Wireless communication over Wi-Fi
 - HTTP communication between Python and ESP32
-- Real-time LED control
-- Low-latency wireless operation
+- Responsive web dashboard
+- Live LED status updates
+- Manual LED ON/OFF controls
+- Real-time dashboard updates without page refresh
+- ESP32 built-in LED control
 
 ---
+## Screenshots
 
-## Example Output
+### Python Application and LED Output
 
 The image below shows the Python application detecting a clap while wirelessly controlling the ESP32 built-in LED.
 
 ![IoT ClapSwitch Demo](images/iot_clapswitch_demo.jpeg)
 
+### ESP32 Web Dashboard
+
+The ESP32 hosts a responsive web dashboard that displays the current LED status and allows manual control over Wi-Fi.
+
+![ESP32 Web Dashboard](images/iot_webdashboard.png)
+
+
 ---
 
 ## How It Works
 
-1. Python continuously listens to the computer microphone.
-2. A clap is detected using audio peak analysis.
-3. Python sends an HTTP request over Wi-Fi.
-4. The ESP32 receives the request.
-5. The ESP32 toggles its built-in LED.
-6. The ESP32 sends a response back to Python.
+1. The Python application continuously monitors the computer microphone.
+2. When a clap exceeds the configured threshold, it is detected.
+3. The application toggles a virtual switch state.
+4. An HTTP request is sent to the ESP32 over the local Wi-Fi network.
+5. The ESP32 receives the request and toggles its built-in LED.
+6. The web dashboard automatically updates the LED status in real time.
 
 ---
 
@@ -38,16 +51,28 @@ The image below shows the Python application detecting a clap while wirelessly c
 
 - ESP32 Development Board
 - USB Cable
-- Computer
+- Computer with Python installed
 - Wi-Fi Network
 
 ---
 
 ## Software Requirements
 
-- Python 3.10 or later
+- Python 3.10 +
 - Arduino IDE
-- ESP32 Arduino Board Package
+- ESP32 Board Package
+
+## Technologies Used
+
+- Python
+- NumPy
+- SoundDevice
+- Requests
+- Wi-Fi
+- HTTP Protocol
+- HTML
+- CSS
+- JavaScript
 
 ---
 
@@ -141,18 +166,16 @@ Clap again to turn the LED OFF.
 
 ```
 IoT-ClapSwitch/
-│
-├── arduino/
+│── arduino/
 │   └── ESP32_ClapSwitch/
 │       └── ESP32_ClapSwitch.ino
-│
-├── images/
-│   └── iot_clapswitch_demo.jpeg
-│
-├── main.py
-├── requirements.txt
-├── README.md
-├── LICENSE
+│── images/
+│   ├── iot_clapswitch_demo.jpeg
+│   └── iot_webdashboard.png
+│── main.py
+│── requirements.txt
+│── README.md
+│── LICENSE
 └── .gitignore
 ```
 
@@ -160,16 +183,16 @@ IoT-ClapSwitch/
 
 ## Future Improvements
 
-- Adjustable clap sensitivity
-- Noise filtering
-- Multiple clap detection
 - MQTT communication
-- Cloud connectivity
+- Cloud dashboard
+- Remote internet access
 - Mobile application
-- Web dashboard
-- Relay control
-- Smart home integration
+- Multiple ESP32 devices
 - TinyML-based clap recognition
+- Voice control
+- Home automation integration
+- OTA firmware updates
+- User authentication
 
 ---
 
